@@ -1,0 +1,11 @@
+#wrapper{
+    display: flex;
+}
+
+#wrapper-content1{
+    width: 70%;
+}
+
+#wrapper-content{
+    width: 30%;
+}
