@@ -85,9 +85,7 @@
         <div class="col-lg-4 col-md-6 col-sm-5">
             <div class="card border-right-0 border-top-0">
                     <div class="card-body">
-                        <p class="h4">Cart Details
-                            <span id="cart_item_total" class="badge badge-success">0</span>
-                        </p>
+                        <p class="h4">Cart Details</p>
 
                         <?php
                             if (isset($getCarts)) {

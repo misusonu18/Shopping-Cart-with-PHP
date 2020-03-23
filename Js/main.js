@@ -2,46 +2,45 @@ $(document).ready(function() {
     alertify.set('notifier', 'position', 'top-center');
     var status = 'success';
 
-    function addItem(cartId, catagory) {
+    function addItem(cartId, category) {
         $.ajax({
             url: 'ajax_crud.php',
             method: 'POST',
-            data: { cart_id_add: cartId, catagory: catagory },
+            data: { cart_id_add: cartId, category: category },
             success: function(response) {
                 alertify.success("Item Added Successfully");                
                 window.open('','_self');
             }
         });
     }
-
-   
-    function updateItem(cartId, catagory) {
+    
+    function updateItem(cartId, category) {
         $.ajax({
             url: 'ajax_crud.php',
             method: 'POST',
-            data: { cart_item_add: cartId, catagory: catagory },
+            data: { cart_item_add: cartId, category: category },
             success: function(data) {
                 alertify.success("Item Increase Successfully");
             }
         });
     }
 
-    function subtractItem(cartId, catagory) {
+    function subtractItem(cartId, category) {
         $.ajax({
             url: 'ajax_crud.php',
             method: 'POST',
-            data: { cart_item_subtract: cartId, catagory: catagory },
+            data: { cart_item_subtract: cartId, category: category },
             success: function(data) {
                 alertify.success("Item Decrease Successfully");
             }
         });
     }
 
-    function deleteItem(cartId, catagory) {
+    function deleteItem(cartId, category) {
         $.ajax({
             url: 'ajax_crud.php',
             method: 'POST',
-            data: { cart_item_delete: cartId, catagory: catagory },
+            data: { cart_item_delete: cartId, category: category },
             success: function(data) {
                 alertify.success("Item Deleted Successfully");
             }
@@ -92,7 +91,6 @@ $(document).ready(function() {
             }
         });
     }
-
 
     fetchDataCart();
 

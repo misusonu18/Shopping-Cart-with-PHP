@@ -2,9 +2,9 @@
     include 'layout/header.php';
     include 'Config/database.php';
 
-    $catagory = $_POST['catagory'];
+    $category = $_POST['category'];
 
-    if (isset($catagory) == 'AddItem') {
+    if (isset($category) == 'AddItem') {
 
         if (isset($_POST['cart_id_add'])) {
             $cart_id = $_POST['cart_id_add'];
@@ -31,7 +31,7 @@
 
     }
 
-    if (isset($catagory) == 'UpdateItem') {
+    if (isset($category) == 'UpdateItem') {
 
         if (isset($_POST['cart_item_add'])) {
             $cart_id = $_POST['cart_item_add'];
@@ -50,7 +50,7 @@
 
     }
 
-    if (isset($catagory) == "SubtractItem") {
+    if (isset($category) == "SubtractItem") {
         if (isset($_POST['cart_item_subtract'])) {
             $cart_id = $_POST['cart_item_subtract'];
 
@@ -71,7 +71,7 @@
         }
     }
 
-    if (isset($catagory) == "DeleteItem") {
+    if (isset($category) == "DeleteItem") {
         if (isset($_POST['cart_item_delete'])) {
            $cart_id = $_POST['cart_item_delete'];
 
