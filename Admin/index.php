@@ -37,6 +37,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-auto">
+                <div class="mt-5 d-flex justify-content-end">
+                    <div class="">
+                        <label><?php echo $_SESSION['username'] ?></label>
+                        <a href="logout.php" class="btn btn-info">Logout</a>
+                    </div>
+                </div>
                 <div class="table-responsive mt-5">
                     <form action="" method="post">
                         <div class="justify-content-end row mr-2 mb-2">

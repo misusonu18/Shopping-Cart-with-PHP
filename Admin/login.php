@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-6 col-sm-4">
-                <div class="card">
+                <div class="card mt-5">
                     <div class="card-header">
                         Login
                     </div>

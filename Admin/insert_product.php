@@ -30,7 +30,7 @@
 
             $target_file = date('dmYHis').str_replace(" ", "", basename($_FILES["product_image"]["name"]));
             move_uploaded_file($_FILES["product_image"]["tmp_name"], "../images/".$target_file);
-            $insert = mysqli_query($connection,'insert into products values(0,"'.$name.'","'.$details.'","'.$price.'","'.$category.'","'.$target_file.'")');
+            $insert = mysqli_query($connection,'insert into products values(0,"'.$name.'","'.$details.'","'.$price.'","'.$category.'","'.$target_file.'",1)');
         }
 
     }
