@@ -4,6 +4,7 @@
     session_start();
 
     $getCarts = mysqli_query($connection, 'select * from cart_table');
+    $getCategory = mysqli_query($connection, 'select distinct category from products');
     $subtotal = 0.00;
 
     if (isset($subtotal)) {
@@ -76,7 +77,27 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-8 col-md-7 col-sm-6 ">
+        <div class="col-lg-2">
+            <?php
+                foreach ($getCategory as $record) {
+            ?>
+                <div class="list-group-item checkbox">
+                    <label>
+                        <input type="radio" 
+                            name="hello" 
+                            class="common_selector category custom-radio" 
+                            value="<?php echo $record['category']; ?>"
+                            data-id="<?php echo $record['category']; ?>"
+                        > 
+                            <?php echo $record['category']; ?>
+                    </label>
+                </div>
+            <?php
+                }
+            ?>
+        </div>
+
+        <div class="col-lg-6 col-md-7 col-sm-6 ">
             <div class="d-inline-flex flex-wrap cart_data">
 
             </div>
